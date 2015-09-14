@@ -1,0 +1,15 @@
+<div id="demo">
+    <div class="easyui-panel" title="Basic Panel">
+        <h1>{{title | uppercase}}</h1>
+        <ul>
+            <li
+                v-repeat="todos"
+                v-on="click: done = !done"
+                class="{{done ? 'done' : ''}}">
+                {{content}}
+            </li>
+        </ul>
+        <p>{{message}}</p>
+        <input v-model="message">
+    </div>
+</div>

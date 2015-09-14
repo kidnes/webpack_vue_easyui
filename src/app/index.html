@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>百度-Rigel</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" type="text/css" href="./css/easyui.css">
+</head>
+
+<body>
+    <div id="app">
+        <h1>Hello App!</h1>
+        <p>
+            <a v-link="{ path: '/contract/updateFrame' }">批量框架更新协议</a>
+            <a v-link="{ path: '/finance/summaryIncome' }">收入查询</a>
+            <a v-link="{ path: '/dmap/task' }">dmap</a>
+        </p>
+        <router-view></router-view>
+    </div>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+
+</html>
