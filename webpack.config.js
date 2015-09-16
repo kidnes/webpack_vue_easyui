@@ -27,13 +27,14 @@ module.exports = {
 
     module: {
         loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel-loader?experimental',
-                exclude: /node_modules/
-            },
+            // {
+            //     test: /\.js$/,
+            //     loader: 'babel-loader?experimental',
+            //     exclude: /node_modules/
+            // },
             {test: /\.html$/, loader: 'html'},
             {test: /\.css$/, loader: 'style-loader!css-loader'},
+            {test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader'},
             {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192'}
         ]
     }

@@ -1,5 +1,5 @@
 
-var ViewModelOptions = {
+var ViewModel = {
     template: require('./index.html'),
     data: function () {
         return {
@@ -20,4 +20,4 @@ var ViewModelOptions = {
     replace: true
 };
 
-module.exports = require('VueModel').getComponent(ViewModelOptions);
+module.exports = require('VueModel').getComponent(ViewModel);

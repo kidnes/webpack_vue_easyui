@@ -1,6 +1,34 @@
+require('./index.styl');
 
+var dao = require('./dao');
 
-module.exports = {
-    template: require('./template.html'),
-    replace: true
+function init() {
+    initDom();
+    initEvent();
+    initDao();
+}
+
+function initDom() {
+    $('#salesPolicyName').combobox({'loader': dao.queryManager});
+    $('#btnSearch').click(onBtnSearch);
+}
+
+function initEvent() {
+
+}
+
+function initDao() {
+}
+alert(1)
+function onBtnSearch() {
+    dao.updateByQuery( function (data) {
+        $('#updateTable').datagrid({'data': data});
+    });
+}
+
+var ViewModel = {
+    template: require('./index.html'),
+    ready: init
 };
+
+module.exports = require('VueModel').getComponent(ViewModel);

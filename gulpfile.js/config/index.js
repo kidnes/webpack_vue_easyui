@@ -2,7 +2,6 @@ var config = {}
 
 config.publicDirectory = "./dist";
 config.sourceDirectory = "./src/app";
-config.depDirectory = "./src/dep";
-config.assetDirectory = "./src/asset";
+config.root = "./src";
 
 module.exports = config;

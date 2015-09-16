@@ -1,19 +1,20 @@
 var gulp     = require('gulp');
-var express  = require('express');
 var config   = require('../config/server');
 var gutil    = require('gulp-util');
-var compress = require('compression');
-var logger   = require('morgan');
 var open     = require('open');
+var app      = require('koa')();
+var koaBody  = require('koa-body')();
+var mock     = require('../lib/mockMiddleware');
+var staticCache = require('koa-static');
 
-gulp.task('server', ['watch', 'webpack:development'], function() {
+gulp.task('server', ['copy', 'watch', 'webpack:development'], function() {
     var url = 'http://localhost:' + config.port;
 
-    express()
-        .use(compress())
-        .use(logger(config.logLevel))
-        .use('/', express.static(config.root, config.staticOptions))
-        .listen(config.port);
+    app.use(staticCache(config.root, config.staticOptions));
+
+    app.use(config.mockLocal ? mock.mockLocal : mock.mockRemote);
+
+    app.listen(config.port);
 
     gutil.log('production server started on ' + gutil.colors.green(url));
     // open(url);

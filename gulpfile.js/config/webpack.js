@@ -55,7 +55,7 @@ module.exports = function (env) {
 
         resolve: {
             extensions: ['', '.js'],
-            modulesDirectories: ['web_modules', 'node_modules', 'VueFrame']        },
+            modulesDirectories: ['web_modules', 'node_modules', 'dep', 'dep/VueFrame']},
 
         module: {
             loaders: [
@@ -66,6 +66,7 @@ module.exports = function (env) {
                 },
                 {test: /\.html$/, loader: 'html'},
                 {test: /\.css$/, loader: 'style-loader!css-loader'},
+                {test: /\.styl$/, loader: 'style-loader!css-loader!stylus-loader'},
                 {test: /\.(png|jpg|gif)$/, loader: 'url-loader?limit=8192'}
             ]
         }

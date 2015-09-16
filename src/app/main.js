@@ -1,4 +1,7 @@
+require('../asset/main.styl');
+
 require('./config-router');
 
-require('easyui/themes/default/easyui.css');
+require('jquery-cookie/jquery.cookie');
+
 require('easyui');

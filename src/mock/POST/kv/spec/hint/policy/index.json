@@ -1,0 +1,36 @@
+{
+  "status": 0,
+  "statusInfo": "",
+  "data": {
+    "dataList": [
+      {
+        "id": 5215,
+        "policyname": "111测试政策111"
+      },
+      {
+        "id": 5295,
+        "policyname": "1"
+      },
+      {
+        "id": 3658,
+        "policyname": "1012zc赠送率2"
+      },
+      {
+        "id": 3392,
+        "policyname": "1109"
+      },
+      {
+        "id": 3419,
+        "policyname": "1111"
+      },
+      {
+        "id": 3648,
+        "policyname": "1012zc赠送率哒"
+      },
+      {
+        "id": 5296,
+        "policyname": "11"
+      }
+    ]
+  }
+}

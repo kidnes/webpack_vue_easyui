@@ -6,17 +6,18 @@
     <title>百度-Rigel</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" type="text/css" href="./css/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./easyui/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./easyui/themes/icon.css">
 </head>
 
 <body>
     <div id="app">
-        <h1>Hello App!</h1>
-        <p>
-            <a v-link="{ path: '/contract/updateFrame' }">批量框架更新协议</a>
-            <a v-link="{ path: '/finance/summaryIncome' }">收入查询</a>
-            <a v-link="{ path: '/dmap/task' }">dmap</a>
-        </p>
+        <img src="./img/logo.gif" width="300" height="50">
+        <ul class="app-menu">
+            <li><a v-link="{ path: '/contract/updateFrame' }">批量框架更新协议</a></li>
+            <li><a v-link="{ path: '/finance/summaryIncome' }">收入查询</a></li>
+            <li><a v-link="{ path: '/dmap/task' }">dmap</a></li>
+        </ul>
         <router-view></router-view>
     </div>
     <script type="text/javascript" src="./js/main.js"></script>

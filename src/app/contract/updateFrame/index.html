@@ -1,0 +1,43 @@
+<div>
+    <ul class="update-frame">
+        <li>
+            <span>销售政策名称<em style="color:red">*</em>：</span>
+            <input class="easyui-combobox" id="salesPolicyName" name="salesPolicyName" data-options="
+                valueField:'id',
+                textField:'policyname',
+                mode: 'remote'">
+        </li>
+        <li>
+            <span class="content-title">客户经理：</span>
+            <input class="easyui-combobox" id="custMgrId" name="custMgrId" data-options="
+                valueField:'id',
+                textField:'policyname',
+                mode: 'remote'">
+        </li>
+        <li>
+            <span class="content-title">合同起始日期：</span>
+            <input id="launchStartTime" class="easyui-datebox" style="width:120px">&nbsp;&nbsp;-&nbsp;&nbsp;
+            <input id="launchEndTime" class="easyui-datebox" style="width:120px">
+        </li>
+        <li>
+            <span class="condition-title">合同号：</span>
+            <input type="text" class="textbox-text validatebox-text textbox-prompt" id="contractNo">
+        </li>
+        <li>
+            <a id="btnSearch" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="width:80px">查询</a>
+        </li>
+    </ul>
+    <table id="updateTable" class="easyui-datagrid" title="批量更新框架协议" style="width:1150px;height:auto" data-options="singleSelect:true,pagination:true,pageSize:10">
+        <thead>
+            <tr>
+                <th data-options="field:'contractNo',width:120,align:'center'">合同号</th>
+                <th data-options="field:'agentName',width:180,align:'center'">代理公司</th>
+                <th data-options="field:'adUserName',width:160,align:'center'">广告主</th>
+                <th data-options="field:'cltMgrName',width:80,align:'center'">客户经理</th>
+                <th data-options="field:'channelMgrName',width:80,align:'center'">渠道经理</th>
+                <th data-options="field:'assistantName',width:80,align:'center'">销售助理</th>
+                <th data-options="field:'contractName',width:180,align:'center'">合同名称</th>
+            </tr>
+        </thead>
+    </table>
+</div>
