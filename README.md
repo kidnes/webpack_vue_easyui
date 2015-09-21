@@ -10,7 +10,6 @@ This example demonstrates using Webpack as the build tool for Vue.js apps, inclu
 ## Setup
 
 ``` bash
-bower install
 npm install
 gulp server
 ```
