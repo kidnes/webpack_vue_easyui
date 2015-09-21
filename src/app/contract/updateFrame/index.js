@@ -19,7 +19,7 @@ function initEvent() {
 
 function initDao() {
 }
-alert(1)
+
 function onBtnSearch() {
     dao.updateByQuery( function (data) {
         $('#updateTable').datagrid({'data': data});

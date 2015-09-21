@@ -55,7 +55,8 @@ module.exports = function (env) {
 
         resolve: {
             extensions: ['', '.js'],
-            modulesDirectories: ['web_modules', 'node_modules', 'dep', 'dep/VueFrame']},
+            modulesDirectories: ['web_modules', 'node_modules', 'node_modules/VueFrame']
+        },
 
         module: {
             loaders: [

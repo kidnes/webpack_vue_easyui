@@ -4,7 +4,7 @@ module.exports = {
     root: process.cwd() + config.publicDirectory.substr(1),
     port: process.env.PORT || 5000,
     mockRoot: process.cwd() + config.root.substr(1),
-    mockLocal: false,   //本地模拟数据和远程服务器数据切换
+    mockLocal: true,   //本地模拟数据和远程服务器数据切换
     mockRemote: {
         server: 'albtest.baidu.com',
         port: 8090

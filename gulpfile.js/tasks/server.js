@@ -3,7 +3,6 @@ var config   = require('../config/server');
 var gutil    = require('gulp-util');
 var open     = require('open');
 var app      = require('koa')();
-var koaBody  = require('koa-body')();
 var mock     = require('../lib/mockMiddleware');
 var staticCache = require('koa-static');
 

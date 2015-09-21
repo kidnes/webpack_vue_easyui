@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/kidnes/webpack_vue_easyui.git"
   },
   "scripts": {
     "test": "gulp build:production"
@@ -40,5 +40,10 @@
     "lodash": "^3.10.1"
   },
   "devDependencies": {
+    "jquery": "~2.1.1",
+    "vue": "^0.12.10",
+    "vue-router": "^0.6.0",
+    "VueFrame": "git+https://github.com/kidnes/VueFrame.git",
+    "easyui": "~1.4.2"
   }
 }

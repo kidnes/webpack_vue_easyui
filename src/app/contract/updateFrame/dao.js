@@ -6,7 +6,7 @@ exports.queryList = function (params, success) {
     $.ajax.post(options.url, params, success);
 };
 
-exports.updateByQuery = function () {
+exports.updateByQuery = function (callback) {
     $.ajax({
         url: '/contract/updateframe/list',
         method: 'post',
@@ -23,7 +23,7 @@ exports.updateByQuery = function () {
             } 
 
             var data = json.data.dataList;
-            success(data);
+            callback(data);
         }
     });
 };
@@ -36,10 +36,11 @@ exports.updateByContractId = function (params, success) {
     $.ajax.post(options.url, params, success);
 };
 
-exports.queryManager = function(param, success) {
+exports.queryManager = function(param, callback) {
     if (!param.q) {
         return;
     }
+
 
     $.ajax({
         url: '/kv/spec/hint/policy/',
@@ -58,7 +59,7 @@ exports.queryManager = function(param, success) {
             } 
 
             var data = json.data.dataList;
-            success(data);
+            callback(data);
         }
     });
 };
